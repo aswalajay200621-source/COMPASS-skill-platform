@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 min-h-screen font-sans antialiased selection:bg-indigo-600 selection:text-white transition-colors duration-300;
+    background-color: #F8FAFC;
+    color: #1E293B;
+  }
+
+  body.dark {
+    background-color: #090D16 !important;
+    color: #F1F5F9 !important;
+  }
+}
+
+/* COMPASS Clean Soft Card Surfaces */
+.compass-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.compass-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+.compass-subcard {
+  background-color: #F8FAFC;
+  border: 1px solid #F1F5F9;
+  border-radius: 0.75rem;
+}
+
+/* DARK MODE OVERRIDES */
+body.dark .compass-card {
+  background-color: #111726 !important;
+  border-color: #1E293B !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark .compass-card:hover {
+  border-color: #334155 !important;
+}
+
+body.dark .compass-subcard {
+  background-color: #1A2333 !important;
+  border-color: #273549 !important;
+  color: #E2E8F0 !important;
+}
+
+body.dark header {
+  background-color: #0F172A !important;
+  border-color: #1E293B !important;
+}
+
+body.dark aside {
+  background-color: #0B1120 !important;
+  border-color: #1E293B !important;
+}
+
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background-color: #161F30 !important;
+  border-color: #26334D !important;
+  color: #F8FAFC !important;
+}
+
+body.dark input::placeholder {
+  color: #64748B !important;
+}
+
+body.dark .bg-white {
+  background-color: #111726 !important;
+  color: #F8FAFC !important;
+}
+
+body.dark .bg-slate-50 {
+  background-color: #090D16 !important;
+}
+
+body.dark .bg-slate-100 {
+  background-color: #161F30 !important;
+}
+
+body.dark .text-slate-900 {
+  color: #F8FAFC !important;
+}
+
+body.dark .text-slate-800 {
+  color: #F1F5F9 !important;
+}
+
+body.dark .text-slate-700 {
+  color: #E2E8F0 !important;
+}
+
+body.dark .text-slate-600 {
+  color: #CBD5E1 !important;
+}
+
+body.dark .text-slate-500 {
+  color: #94A3B8 !important;
+}
+
+body.dark .border-slate-200 {
+  border-color: #1E293B !important;
+}
+
+body.dark .border-slate-100 {
+  border-color: #1E293B !important;
+}
+
+/* Railway Panel Dark Support */
+body.dark .railway-panel {
+  background-color: #111726 !important;
+  border-color: #1E293B !important;
+}
+
+body.dark .railway-card {
+  background-color: #111726 !important;
+  border-color: #1E293B !important;
+}
+
+body.dark .railway-subcard {
+  background-color: #1A2333 !important;
+  border-color: #273549 !important;
+}
+
+/* Custom Dotted Path Animation for Loading Screen */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 8;
+  animation: dash 2.5s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: #090D16;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: #273549;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: #3B4D68;
+}
+
+/* Clean Print Styles for PDF Generation */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .compass-card, .compass-subcard {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+    color: #0f172a !important;
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "skillsTaxonomy": [
+    { "id": "skill_python", "name": "Python" },
+    { "id": "skill_java", "name": "Java" },
+    { "id": "skill_c", "name": "C++" },
+    { "id": "skill_sql-postgresql-mysql-sql-server", "name": "SQL (PostgreSQL, MySQL, SQL Server)" },
+    { "id": "skill_data-analytics-pandas-numpy", "name": "Data Analytics (Pandas, NumPy)" },
+    { "id": "skill_machine-learning-deep-learning-pytorch-t", "name": "Machine Learning & Deep Learning (PyTorch, TensorFlow)" },
+    { "id": "skill_ai-tools-prompt-engineering-chatgpt-clau", "name": "AI Tools & Prompt Engineering (ChatGPT, Claude, API Integration)" },
+    { "id": "skill_linux-bash-scripting", "name": "Linux / Bash Scripting" },
+    { "id": "skill_cybersecurity-network-security", "name": "Cybersecurity / Network Security" },
+    { "id": "skill_javascript-typescript", "name": "JavaScript / TypeScript" },
+    { "id": "skill_html5-css3", "name": "HTML5 / CSS3" },
+    { "id": "skill_react-next-js", "name": "React / Next.js" },
+    { "id": "skill_node-js-express", "name": "Node.js / Express" },
+    { "id": "skill_flutter", "name": "Flutter" },
+    { "id": "skill_software-testing", "name": "Software Testing" },
+    { "id": "skill_php", "name": "PHP" },
+    { "id": "skill_django-flask", "name": "Django / Flask" },
+    { "id": "skill_data-visualization-tableau-power-bi-look", "name": "Data Visualization (Tableau, Power BI, Looker)" },
+    { "id": "skill_data-engineering-etl-apache-spark-snowfl", "name": "Data Engineering (ETL, Apache Spark, Snowflake)" },
+    { "id": "skill_product-management-agile-scrum", "name": "Product Management / Agile / Scrum" },
+    { "id": "skill_microprocessors-and-microcontrollers", "name": "Microprocessors and Microcontrollers" },
+    { "id": "skill_image-processing", "name": "Image processing" },
+    { "id": "skill_embedded-system", "name": "Embedded system" },
+    { "id": "skill_amazon-web-services-aws", "name": "Amazon Web Services (AWS)" },
+    { "id": "skill_c-net", "name": "C# / .NET" }
+  ],
+  "mentors": [
+    {
+      "id": "faculty_sajmisalam",
+      "name": "Sajmi Salam",
+      "email": "sajmisalam@mgits.ac.in",
+      "registeredAt": "9/7/2026 20:18:05",
+      "skillIds": [
+        "skill_python",
+        "skill_java",
+        "skill_c",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_data-analytics-pandas-numpy",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_ai-tools-prompt-engineering-chatgpt-clau",
+        "skill_linux-bash-scripting",
+        "skill_cybersecurity-network-security"
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Data Analytics (Pandas, NumPy)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "AI Tools & Prompt Engineering (ChatGPT, Claude, API Integration)",
+        "Linux / Bash Scripting",
+        "Cybersecurity / Network Security"
+      ]
+    },
+    {
+      "id": "faculty_anoopas",
+      "name": "Dr.Anoopa S",
+      "email": "anoopas@mgits.ac.in",
+      "registeredAt": "9/8/2026 0:38:05",
+      "skillIds": [
+        "skill_python",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_data-analytics-pandas-numpy",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_ai-tools-prompt-engineering-chatgpt-clau"
+      ],
+      "skills": [
+        "Python",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Data Analytics (Pandas, NumPy)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "AI Tools & Prompt Engineering (ChatGPT, Claude, API Integration)"
+      ]
+    },
+    {
+      "id": "faculty_basilbaby",
+      "name": "Basil Baby",
+      "email": "basilbaby@mgits.ac.in",
+      "registeredAt": "9/8/2026 6:09:39",
+      "skillIds": [
+        "skill_python",
+        "skill_javascript-typescript",
+        "skill_java",
+        "skill_c",
+        "skill_html5-css3",
+        "skill_react-next-js",
+        "skill_node-js-express",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_flutter"
+      ],
+      "skills": [
+        "Python",
+        "JavaScript / TypeScript",
+        "Java",
+        "C++",
+        "HTML5 / CSS3",
+        "React / Next.js",
+        "Node.js / Express",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Flutter"
+      ]
+    },
+    {
+      "id": "faculty_ameenakashraf",
+      "name": "Dr Ameena K Ashraf",
+      "email": "ameenakashraf@mgits.ac.in",
+      "registeredAt": "9/8/2026 7:40:29",
+      "skillIds": [
+        "skill_software-testing"
+      ],
+      "skills": [
+        "Software Testing"
+      ]
+    },
+    {
+      "id": "faculty_mithumarygeorge",
+      "name": "Mithu Mary George",
+      "email": "mithumarygeorge@mgits.ac.in",
+      "registeredAt": "9/8/2026 8:02:56",
+      "skillIds": [
+        "skill_python",
+        "skill_java",
+        "skill_data-analytics-pandas-numpy",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_ai-tools-prompt-engineering-chatgpt-clau"
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "Data Analytics (Pandas, NumPy)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "AI Tools & Prompt Engineering (ChatGPT, Claude, API Integration)"
+      ]
+    },
+    {
+      "id": "faculty_parvathyen",
+      "name": "Parvathy E N",
+      "email": "parvathyen@mgits.ac.in",
+      "registeredAt": "9/8/2026 8:04:58",
+      "skillIds": [
+        "skill_python",
+        "skill_php",
+        "skill_django-flask",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_data-analytics-pandas-numpy",
+        "skill_data-visualization-tableau-power-bi-look",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_data-engineering-etl-apache-spark-snowfl"
+      ],
+      "skills": [
+        "Python",
+        "PHP",
+        "Django / Flask",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Data Analytics (Pandas, NumPy)",
+        "Data Visualization (Tableau, Power BI, Looker)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "Data Engineering (ETL, Apache Spark, Snowflake)"
+      ]
+    },
+    {
+      "id": "faculty_sreejas",
+      "name": "Sreeja S",
+      "email": "sreejas@mgits.ac.in",
+      "registeredAt": "9/8/2026 8:24:27",
+      "skillIds": [
+        "skill_python",
+        "skill_javascript-typescript",
+        "skill_java",
+        "skill_c",
+        "skill_html5-css3",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_linux-bash-scripting",
+        "skill_cybersecurity-network-security",
+        "skill_product-management-agile-scrum"
+      ],
+      "skills": [
+        "Python",
+        "JavaScript / TypeScript",
+        "Java",
+        "C++",
+        "HTML5 / CSS3",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Linux / Bash Scripting",
+        "Cybersecurity / Network Security",
+        "Product Management / Agile / Scrum"
+      ]
+    },
+    {
+      "id": "faculty_sreethav",
+      "name": "Sreetha V Kumar",
+      "email": "sreethav@mgits.ac.in",
+      "registeredAt": "9/8/2026 8:24:58",
+      "skillIds": [
+        "skill_java",
+        "skill_c",
+        "skill_html5-css3",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_product-management-agile-scrum",
+        "skill_microprocessors-and-microcontrollers",
+        "skill_image-processing",
+        "skill_embedded-system"
+      ],
+      "skills": [
+        "Java",
+        "C++",
+        "HTML5 / CSS3",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "Product Management / Agile / Scrum",
+        "Microprocessors and Microcontrollers",
+        "Image processing",
+        "Embedded system"
+      ]
+    },
+    {
+      "id": "faculty_nimmimk",
+      "name": "Nimmi  M K",
+      "email": "nimmimk@mgits.ac.in",
+      "registeredAt": "9/8/2026 9:10:23",
+      "skillIds": [
+        "skill_python",
+        "skill_java",
+        "skill_c",
+        "skill_html5-css3"
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "HTML5 / CSS3"
+      ]
+    },
+    {
+      "id": "faculty_cerenemariam",
+      "name": "Dr Cerene Mariam Abraham",
+      "email": "cerenemariam@mgits.ac.in",
+      "registeredAt": "9/8/2026 9:17:05",
+      "skillIds": [
+        "skill_data-analytics-pandas-numpy",
+        "skill_data-visualization-tableau-power-bi-look",
+        "skill_machine-learning-deep-learning-pytorch-t"
+      ],
+      "skills": [
+        "Data Analytics (Pandas, NumPy)",
+        "Data Visualization (Tableau, Power BI, Looker)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)"
+      ]
+    },
+    {
+      "id": "faculty_priyacv",
+      "name": "Dr Priya C V",
+      "email": "priyacv@mgits.ac.in",
+      "registeredAt": "9/8/2026 9:20:42",
+      "skillIds": [
+        "skill_python",
+        "skill_java",
+        "skill_c",
+        "skill_data-analytics-pandas-numpy",
+        "skill_data-visualization-tableau-power-bi-look",
+        "skill_machine-learning-deep-learning-pytorch-t"
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "Data Analytics (Pandas, NumPy)",
+        "Data Visualization (Tableau, Power BI, Looker)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)"
+      ]
+    },
+    {
+      "id": "faculty_ledakamal",
+      "name": "LEDA KAMAL",
+      "email": "ledakamal@mgits.ac.in",
+      "registeredAt": "9/8/2026 9:57:16",
+      "skillIds": [
+        "skill_python",
+        "skill_data-analytics-pandas-numpy",
+        "skill_amazon-web-services-aws"
+      ],
+      "skills": [
+        "Python",
+        "Data Analytics (Pandas, NumPy)",
+        "Amazon Web Services (AWS)"
+      ]
+    },
+    {
+      "id": "faculty_rijajose",
+      "name": "RIJA JOSE",
+      "email": "rijajose@mgits.ac.in",
+      "registeredAt": "9/8/2026 10:02:18",
+      "skillIds": [
+        "skill_python",
+        "skill_javascript-typescript",
+        "skill_c",
+        "skill_php",
+        "skill_html5-css3",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_data-analytics-pandas-numpy",
+        "skill_data-visualization-tableau-power-bi-look",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_ai-tools-prompt-engineering-chatgpt-clau",
+        "skill_linux-bash-scripting"
+      ],
+      "skills": [
+        "Python",
+        "JavaScript / TypeScript",
+        "C++",
+        "PHP",
+        "HTML5 / CSS3",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Data Analytics (Pandas, NumPy)",
+        "Data Visualization (Tableau, Power BI, Looker)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "AI Tools & Prompt Engineering (ChatGPT, Claude, API Integration)",
+        "Linux / Bash Scripting"
+      ]
+    },
+    {
+      "id": "faculty_divyaks",
+      "name": "DIVYA K S",
+      "email": "divyaks@mgits.ac.in",
+      "registeredAt": "9/8/2026 11:45:43",
+      "skillIds": [
+        "skill_python",
+        "skill_java",
+        "skill_c",
+        "skill_php",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_data-analytics-pandas-numpy",
+        "skill_data-visualization-tableau-power-bi-look",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_ai-tools-prompt-engineering-chatgpt-clau",
+        "skill_linux-bash-scripting"
+      ],
+      "skills": [
+        "Python",
+        "Java",
+        "C++",
+        "PHP",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Data Analytics (Pandas, NumPy)",
+        "Data Visualization (Tableau, Power BI, Looker)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "AI Tools & Prompt Engineering (ChatGPT, Claude, API Integration)",
+        "Linux / Bash Scripting"
+      ]
+    },
+    {
+      "id": "faculty_chinchujacob",
+      "name": "Chinchu Jacob",
+      "email": "chinchujacob@mgits.ac.in",
+      "registeredAt": "9/8/2026 12:57:39",
+      "skillIds": [
+        "skill_python",
+        "skill_c",
+        "skill_sql-postgresql-mysql-sql-server",
+        "skill_data-analytics-pandas-numpy",
+        "skill_machine-learning-deep-learning-pytorch-t"
+      ],
+      "skills": [
+        "Python",
+        "C++",
+        "SQL (PostgreSQL, MySQL, SQL Server)",
+        "Data Analytics (Pandas, NumPy)",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)"
+      ]
+    },
+    {
+      "id": "faculty_thasni",
+      "name": "Thasni K N",
+      "email": "thasni@mgits.ac.in",
+      "registeredAt": "9/8/2026 12:58:03",
+      "skillIds": [
+        "skill_java",
+        "skill_c-net",
+        "skill_c",
+        "skill_machine-learning-deep-learning-pytorch-t",
+        "skill_cybersecurity-network-security"
+      ],
+      "skills": [
+        "Java",
+        "C# / .NET",
+        "C++",
+        "Machine Learning & Deep Learning (PyTorch, TensorFlow)",
+        "Cybersecurity / Network Security"
+      ]
+    }
+  ]
+}
