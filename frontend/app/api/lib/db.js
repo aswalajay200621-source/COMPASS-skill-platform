@@ -1,15 +1,18 @@
 import { Pool } from 'pg';
 
-const connectionString = process.env.DATABASE_URL;
-
 let pool;
 
 function getPool() {
   if (!pool) {
+    const connectionString = process.env.DATABASE_URL;
+    if (!connectionString) {
+      console.error('[DB CONFIG ERROR] DATABASE_URL is not defined in process.env!');
+      throw new Error('DATABASE_URL environment variable is missing.');
+    }
     pool = new Pool({
       connectionString,
       ssl: { rejectUnauthorized: false },
-      max: 5,
+      max: 3,
     });
     pool.on('error', (err) => {
       console.error('[POSTGRES POOL ERROR]', err);
