@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Check, Send, Award, BookOpen } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function ProjectMatchFeed({ currentStudent, onOpenSkillGapModal, onProjectCompleted }) {
   const [projects, setProjects] = useState([]);

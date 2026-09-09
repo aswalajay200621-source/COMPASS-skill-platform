@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { X, Send, CheckCircle2, UserCheck, Sparkles } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function MentorshipModal({
   faculty,

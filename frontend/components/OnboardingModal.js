@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Compass, X, Plus, ArrowRight } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function OnboardingModal({ onSaveSuccess }) {
   const [name, setName] = useState('');

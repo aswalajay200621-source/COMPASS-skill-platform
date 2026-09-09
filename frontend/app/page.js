@@ -15,7 +15,7 @@ import OnboardingModal from '../components/OnboardingModal';
 import PortfolioView from '../components/PortfolioView';
 import { Award, CheckCircle2, Send, ExternalLink, Plus } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function Home() {
   const [loadingApp, setLoadingApp] = useState(true);

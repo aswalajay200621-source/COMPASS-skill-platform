@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Send } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 const SKILL_OPTIONS = [
   'HTML/CSS', 'JavaScript', 'React.js', 'Node.js', 'MongoDB', 

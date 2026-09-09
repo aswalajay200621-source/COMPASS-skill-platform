@@ -46,21 +46,33 @@ if (isPostgres) {
   };
 } else {
   console.log('[DB] Connecting to local SQLite Database (compass.db)...');
-  const Database = require('better-sqlite3');
+  const sqlite3 = require('sqlite3').verbose();
   const path = require('path');
   const dbPath = path.join(__dirname, 'compass.db');
-  const sqliteDb = new Database(dbPath);
-  sqliteDb.pragma('foreign_keys = ON');
+  const sqliteDb = new sqlite3.Database(dbPath);
+  sqliteDb.run('PRAGMA foreign_keys = ON');
 
   dbExport = {
     isPostgres: false,
     sqliteDb,
     prepare: (sql) => {
-      const stmt = sqliteDb.prepare(sql);
+      const cleanSql = sql.replace(/::jsonb/gi, '');
       return {
-        all: async (...params) => stmt.all(...params.flat()),
-        get: async (...params) => stmt.get(...params.flat()),
-        run: async (...params) => stmt.run(...params.flat())
+        all: (...params) => new Promise((resolve, reject) => {
+          sqliteDb.all(cleanSql, params.flat(), (err, rows) => {
+            if (err) reject(err); else resolve(rows || []);
+          });
+        }),
+        get: (...params) => new Promise((resolve, reject) => {
+          sqliteDb.get(cleanSql, params.flat(), (err, row) => {
+            if (err) reject(err); else resolve(row || null);
+          });
+        }),
+        run: (...params) => new Promise((resolve, reject) => {
+          sqliteDb.run(cleanSql, params.flat(), function(err) {
+            if (err) reject(err); else resolve({ lastInsertRowid: this.lastID, changes: this.changes });
+          });
+        })
       };
     }
   };

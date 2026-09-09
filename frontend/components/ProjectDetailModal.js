@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, CheckCircle2, AlertCircle, Users, ExternalLink, Award, BookOpen, ArrowRight, Send } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function ProjectDetailModal({
   project,

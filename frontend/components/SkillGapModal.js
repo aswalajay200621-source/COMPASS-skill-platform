@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, ExternalLink } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function SkillGapModal({ projectId, studentId, onClose }) {
   const [data, setData] = useState(null);

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { CheckCircle2, ExternalLink, Printer, Share2, Award, FolderKanban, Users, Compass, Sparkles } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function PortfolioView({ studentId }) {
   const [data, setData] = useState(null);

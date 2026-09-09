@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Trash2, Plus } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 const AVAILABLE_SKILL_OPTIONS = [
   'HTML/CSS', 'JavaScript', 'React.js', 'Node.js', 'MongoDB', 

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Briefcase, Calendar, CheckCircle2, AlertCircle, Users, ArrowRight } from 'lucide-react';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = '/api';
 
 export default function OpportunitiesView({
   currentStudent,

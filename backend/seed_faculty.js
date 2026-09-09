@@ -14,7 +14,7 @@ function parseDateToSQLite(dateStr) {
   }
 }
 
-function runSeed(dbInstance) {
+async function runSeed(dbInstance) {
   const db = dbInstance || require('./db');
   console.log('[SEED] Starting COMPASS Faculty Seed Script & Skill Taxonomy Merge...');
 
@@ -30,25 +30,25 @@ function runSeed(dbInstance) {
   // 1. Merge Skills Taxonomy (Matching by name, case-insensitive, reusing existing IDs)
   console.log(`[SEED] Processing ${skillsTaxonomy.length} taxonomy skills...`);
   
-  const existingSkills = db.prepare('SELECT id, name FROM skills').all();
+  const existingSkills = await db.prepare('SELECT id, name FROM skills').all();
   const existingMap = new Map(); // lower(name) -> id
-  existingSkills.forEach(s => existingMap.set(s.name.trim().toLowerCase(), s.id));
+  (existingSkills || []).forEach(s => existingMap.set(s.name.trim().toLowerCase(), s.id));
 
   const insertSkillStmt = db.prepare('INSERT INTO skills (name, category) VALUES (?, ?)');
 
   let newSkillsAdded = 0;
-  skillsTaxonomy.forEach(taxSkill => {
+  for (const taxSkill of skillsTaxonomy) {
     const normName = taxSkill.name.trim().toLowerCase();
     if (!existingMap.has(normName)) {
       const category = taxSkill.name.includes('Data') || taxSkill.name.includes('Analytics') ? 'Data & AI'
         : taxSkill.name.includes('Python') || taxSkill.name.includes('Java') || taxSkill.name.includes('C++') || taxSkill.name.includes('C#') ? 'Programming'
         : taxSkill.name.includes('SQL') ? 'Database'
         : 'General';
-      const result = insertSkillStmt.run(taxSkill.name, category);
+      const result = await insertSkillStmt.run(taxSkill.name, category);
       existingMap.set(normName, result.lastInsertRowid);
       newSkillsAdded++;
     }
-  });
+  }
   console.log(`[SEED] Skills taxonomy merge completed. New skills added: ${newSkillsAdded}. Total skills in taxonomy: ${existingMap.size}.`);
 
   // 2. Insert / Update Mentors & Dual-POV User Records
@@ -65,41 +65,41 @@ function runSeed(dbInstance) {
   let mentorsInserted = 0;
   let mentorsUpdated = 0;
 
-  mentors.forEach(m => {
+  for (const m of mentors) {
     const cleanEmail = m.email.trim().toLowerCase();
     const formattedCreatedAt = parseDateToSQLite(m.registeredAt);
     const skillsJson = JSON.stringify(m.skills || []);
     const studentSkillsJson = JSON.stringify((m.skills || []).map(s => typeof s === 'string' ? { name: s, level: 'Advanced' } : s));
 
     // Faculty Record
-    const existingFaculty = findFacultyByEmail.get(cleanEmail);
+    const existingFaculty = await findFacultyByEmail.get(cleanEmail);
     let facultyId;
 
     if (existingFaculty) {
-      updateFacultyStmt.run(m.name, '', skillsJson, formattedCreatedAt, existingFaculty.id);
+      await updateFacultyStmt.run(m.name, '', skillsJson, formattedCreatedAt, existingFaculty.id);
       facultyId = existingFaculty.id;
       mentorsUpdated++;
     } else {
-      const res = insertFacultyStmt.run(m.name, cleanEmail, '', skillsJson, '', formattedCreatedAt);
+      const res = await insertFacultyStmt.run(m.name, cleanEmail, '', skillsJson, '', formattedCreatedAt);
       facultyId = res.lastInsertRowid;
       mentorsInserted++;
     }
 
     // Student POV User Record (Dual POV)
-    const existingStudent = findStudentByEmail.get(cleanEmail);
+    const existingStudent = await findStudentByEmail.get(cleanEmail);
     if (existingStudent) {
-      updateStudentStmt.run(m.name, 'Faculty / Mentor', 'Faculty Mentor', studentSkillsJson, facultyId, formattedCreatedAt, existingStudent.id);
+      await updateStudentStmt.run(m.name, 'Faculty / Mentor', 'Faculty Mentor', studentSkillsJson, facultyId, formattedCreatedAt, existingStudent.id);
     } else {
-      insertStudentStmt.run(m.name, cleanEmail, 'Faculty / Mentor', 'Faculty Mentor', studentSkillsJson, '[]', facultyId, formattedCreatedAt);
+      await insertStudentStmt.run(m.name, cleanEmail, 'Faculty / Mentor', 'Faculty Mentor', studentSkillsJson, '[]', facultyId, formattedCreatedAt);
     }
-  });
+  }
 
   console.log(`[SEED SUCCESS] Pre-enrolled Faculty Mentors Seed Complete! Inserted: ${mentorsInserted}, Updated: ${mentorsUpdated}. Total mentors: ${mentors.length}.`);
 }
 
 // Run when called directly or required
 if (require.main === module) {
-  runSeed();
+  runSeed().catch(console.error);
 }
 
 module.exports = runSeed;
